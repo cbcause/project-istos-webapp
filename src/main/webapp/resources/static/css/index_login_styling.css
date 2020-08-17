@@ -1,0 +1,198 @@
+* {
+	box-sizing: border-box;
+	font-family: Calibri;
+	margin: 0;
+}
+
+body {
+	background-size: cover;
+	background: url('../images/background.jpg') no-repeat fixed center;
+}
+
+/*------------------------------------------- NAVIGATION BAR --------------------------------------------*/
+.navigation_bar {
+	overflow: hidden;
+	background: linear-gradient(to right, #99ff66, #3399ff, #ff7733);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+.navigation_bar .selection {
+	display: flex;
+	float: left;
+	text-decoration: none;
+	text-align: center;
+	padding: 16px;
+	font-size: 20px;
+	font-weight: bold;
+	pointer-events: none;
+	cursor: default;
+	color: grey;
+}
+
+
+/*------------------------------------------- GRID CONTAINER (GENERAL) --------------------------------------------*/
+
+.login_container {
+	display: grid;
+	grid-template-columns: minmax(0,1fr);
+	grid-gap: 15px;
+	max-width: 100%;
+	margin: auto;
+	color: white;
+	padding: 14px;
+}
+
+h1, h3  {
+	color: white;
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline;
+	font-style: italic;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 40px;
+	animation: glow .9s infinite alternate;
+
+}
+
+h3 {
+	text-align: center;
+	font-size: 20px;
+	margin: 20px 10px 0 10px;
+}
+
+#signup_link {
+	color: red;
+	text-decoration: none;
+	animation: signup_link_glow .8s infinite alternate;
+}
+
+#signup_link:visited, #signup_link:hover {
+	color: yellow;
+}
+
+
+/*------------------------------------------- 1. CONTACTS --------------------------------------------*/
+
+fieldset {
+	background-color: lightgray;
+	border: 2px solid black;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+legend {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 19px;
+	font-weight: bold;
+	letter-spacing: 1.6px;
+	border: 2px solid black;
+	background-color: black;
+	color: white;
+}
+
+label {
+	font-size: 20px;
+	display: inline-block;
+	line-height: 150%;
+	width: 15%;
+	margin-bottom: 15px;
+}
+
+form {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.6px;
+	width: 85%;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+input[type = email], input[type = password] {
+	border: 2px solid black;
+	border-radius: 10px;
+	width: 75%;
+	padding: 4px 8px;
+	box-sizing: border-box;
+	display: inline-block;
+	margin-left: 50px;
+}
+
+input:hover, input:focus{
+	background-color: lightgreen;
+}
+
+#submit_buttons {
+	display: flex;
+	justify-content: center;
+	margin-top: 12px;
+	margin-left: 25px;
+}
+
+/*#submit_buttons #login, #submit_buttons #signup {
+	width: 40%;
+	float: left;
+	background: #339cdf;
+	color: white;
+	padding: 12px 15px 12px 15px;
+	font-size: 15px;
+	text-shadow: 0 -1px #278db8;
+	border: 1px solid #339cdf;
+	margin-right: 12px;
+	cursor: pointer;
+}*/
+
+
+input[type = submit] {
+	float: left;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 12px 15px 12px 15px;
+	width: 15%;
+	background: #1a75ff;
+	border: 2px solid #1a75ff;
+	border-radius: 5px;
+	color: white;
+	display: inline-block;
+	margin: 15px;
+	cursor: pointer;
+}
+
+input:focus {
+	outline: none;
+}
+
+/*------------------------------------------- 2. FOOTER --------------------------------------------*/
+#footer_info {
+	text-align: center;
+	margin-top: 100px;
+	color: white;
+}
+
+/*------------------------------------------- KEYFRAMES --------------------------------------------*/
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes signup_link_glow {
+	to {
+		filter: drop-shadow(2px 2px 8px white);
+	}
+}
